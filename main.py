@@ -1,12 +1,8 @@
 from prepare_data import preprocessor
 
 import os
-import soundfile as sf
-from datasets import Dataset, Audio, Features, Value
-from transformers import Speech2TextProcessor, Speech2TextForConditionalGeneration, Speech2TextConfig, Seq2SeqTrainingArguments, Seq2SeqTrainer 
+from transformers import Speech2TextProcessor, Speech2TextForConditionalGeneration, Speech2TextConfig, DataCollatorWithPadding 
 from torch.utils.data import DataLoader
-
-from transformers import DataCollatorWithPadding
 import torch
 from torch.optim import AdamW
 from tqdm import tqdm
